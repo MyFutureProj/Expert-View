@@ -1,0 +1,13 @@
+spring:
+  kafka:
+    producer:
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      bootstrap:
+        server: 'localhost:9092'
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+stream:
+  data:
+    topic_name: event_data_stream
+    uri: 'https://stream.wikimedia.org/v2/stream/recentchange'
+server:
+  port: '8080'
