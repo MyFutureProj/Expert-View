@@ -5,6 +5,7 @@
 	<modules>
 		<module>producer-data-stream</module>
 		<module>consumer-data-stream</module>
+		<module>user-auth-service</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
