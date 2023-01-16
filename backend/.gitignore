@@ -1,4 +1,70 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+# misc
+Thumbs.db
+desktop.ini
+
+# IDE
+*.sublime-*
+*.code-workspace
 /.idea
+
+#maven
+mvnw.cmd
+mvnw
+
+# Gradle
+/.m2/**
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+*.log*
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+#Eclipse and Build
+/.classpath
+**/.classpath
+/.project
+**/.project
+/.settings
+**/.settings
+/.metadata/
+**/.metadata/
+
+/bin/**
+**/bin/**
+/build/
+**/build/
+/.m2/
+**/.gitignore
+/target/**
+
+/bin/
+**/out/
+libs/
+**/**.iml
+
+
+**/.idea/**
+**/.settings/**
+**/.gitignore/**
+**/target/**
+
+
+
+
+
+
+
+
+
+
+
