@@ -1,0 +1,17 @@
+spring:
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap:
+        server: 'localhost:9092'
+      key-deserialization: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: dataStreamGroup
+      value-deserialization: org.apache.kafka.common.serialization.StringDeserializer
+  data:
+    mongodb:
+      uri: 'mongodb://localhost/Expert-view'
+stream:
+  data:
+    topic_name: event_data_stream
+server:
+  port: '8081'
