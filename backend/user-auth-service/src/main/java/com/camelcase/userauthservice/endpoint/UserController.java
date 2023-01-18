@@ -7,9 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "*", maxAge = 4800)
+import static com.camelcase.userauthservice.constants.UserServiceConstant.API;
+import static com.camelcase.userauthservice.constants.UserServiceConstant.USER;
+
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping(API + USER)
 public class UserController {
 
     @GetMapping("/all")
