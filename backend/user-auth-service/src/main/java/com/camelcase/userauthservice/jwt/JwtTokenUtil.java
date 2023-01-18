@@ -23,7 +23,7 @@ public class JwtTokenUtil {
     @Value("${app.jwt.secret}")
     private String SECRET_KEY;
 
-    @Value("${app.jwt.expire_duration}")
+    @Value("${app.jwt.expiration_ms}")
     private long EXPIRE_DURATION;
 
     public String generateAccessToken(User user) {
