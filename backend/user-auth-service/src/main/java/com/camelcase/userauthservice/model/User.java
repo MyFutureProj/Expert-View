@@ -2,6 +2,7 @@ package com.camelcase.userauthservice.model;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
@@ -13,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "users")
@@ -20,6 +22,8 @@ public class User implements UserDetails {
     @Id
     private ObjectId id;
 
+    @NotNull
+    private String username;
     @NotNull
     private String email;
 
@@ -29,11 +33,6 @@ public class User implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
-    }
-
-    @Override
-    public String getUsername() {
-        return this.email;
     }
 
     @Override
