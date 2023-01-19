@@ -81,7 +81,7 @@ class Login extends Component {
     }
 
     return (
-      <div className="col-md-12">
+      <div className="col-md-6">
         <div className="card bg-light text-dark">
           <h1><center>Login</center></h1>
 

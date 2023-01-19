@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 class Profile extends Component {
 
- 
+
   render() {
 
     const { user: currentUser } = this.props;
@@ -14,19 +14,18 @@ class Profile extends Component {
     }
 
     return (
-      <div class="card bg-light text-dark">
-        <h1>{currentUser.username}</h1>
-        <p>
-          <strong>Id:</strong> {currentUser.id}
-        </p>
-        <p>
-          <strong>Email:</strong> {currentUser.email}
-        </p>
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-          </div>
+      <div className="col-md-6">
+        <div class="card bg-light text-dark">
+          <h1>{currentUser.username}</h1>
+          <p>
+            <strong>Email:</strong> {currentUser.email}
+          </p>
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+      </div>
     );
   }
 }

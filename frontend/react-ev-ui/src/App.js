@@ -103,7 +103,7 @@ class App extends Component {
             )}
           </nav>
 
-          <div className="container mt-3">
+          <div className="container mt-3 d-flex justify-content-center">
             <Switch>
               <Route exact path={["/", "/register"]} component={Register} />
               <Route exact path="/login" component={Login} />
