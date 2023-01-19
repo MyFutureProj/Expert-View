@@ -2,6 +2,8 @@ package com.camelcase.eventhandler;
 
 import com.launchdarkly.eventsource.MessageEvent;
 import com.launchdarkly.eventsource.background.BackgroundEventHandler;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
 
@@ -32,8 +34,10 @@ public class DataStreamEventHandler implements BackgroundEventHandler {
     @Override
     public void onMessage(String s, MessageEvent messageEvent) throws Exception {
         log.info("############ Message received ################ : {}",messageEvent.getData());
-        kafkaTemplate.send(topic,messageEvent.getData());
-        log.info("Data sent on Topic: {}",s);
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode node = (ObjectNode) mapper.readTree(messageEvent.getData());
+        node.remove("meta");
+        kafkaTemplate.send(topic,node.toString());
     }
 
     @Override
